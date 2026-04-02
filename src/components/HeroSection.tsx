@@ -48,7 +48,20 @@ const HeroSection = () => {
         {/* Profile image */}
         <div className="order-1 md:order-2 flex justify-center animate-scale-in">
           <div className="relative">
+            {/* Glow */}
             <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-accent/30 rounded-full blur-3xl animate-float" />
+            
+            {/* Decorative ring pattern */}
+            <div className="absolute -inset-6 rounded-full border border-primary/20 animate-[spin_20s_linear_infinite]" />
+            <div className="absolute -inset-10 rounded-full border border-dashed border-accent/15 animate-[spin_30s_linear_infinite_reverse]" />
+            <div className="absolute -inset-14 rounded-full border border-dotted border-primary/10 animate-[spin_40s_linear_infinite]" />
+            
+            {/* Corner dots */}
+            <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-primary shadow-[0_0_8px_hsl(var(--primary)/0.6)]" />
+            <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-accent shadow-[0_0_8px_hsl(var(--accent)/0.6)]" />
+            <div className="absolute top-1/2 -left-4 -translate-y-1/2 w-2 h-2 rounded-full bg-primary shadow-[0_0_8px_hsl(var(--primary)/0.6)]" />
+            <div className="absolute top-1/2 -right-4 -translate-y-1/2 w-2 h-2 rounded-full bg-accent shadow-[0_0_8px_hsl(var(--accent)/0.6)]" />
+
             <div className="relative glass-card rounded-full p-2">
               <img
                 src={profileImg}
