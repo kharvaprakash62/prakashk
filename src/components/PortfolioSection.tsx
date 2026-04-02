@@ -2,34 +2,60 @@ import { ArrowUpRight } from "lucide-react";
 
 const projects = [
   {
-    title: "SaaS Analytics Dashboard",
-    description: "Data-driven dashboard with real-time analytics, interactive charts, and customizable widgets.",
-    tools: ["Figma", "React", "Tailwind"],
-    color: "from-primary/20 to-accent/20",
+    title: "Logo Design",
+    description: "Creative logo design with unique brand identity and visual storytelling.",
+    tools: ["Illustrator", "Branding", "Typography"],
+    image: "https://mir-s3-cdn-cf.behance.net/projects/404/ece93e244004647.Y3JvcCwxMjA0LDk0MiwxMTAsMA.jpg",
+    link: "https://www.behance.net/gallery/244004647/Logo-Design",
   },
   {
-    title: "Productivity Mobile App UI",
-    description: "Task management app with intuitive flows, dark mode, and gesture-based interactions.",
-    tools: ["Figma", "Protopie", "iOS HIG"],
-    color: "from-accent/20 to-primary/20",
+    title: "Site Redesign",
+    description: "Complete website redesign with modern UI patterns and improved user experience.",
+    tools: ["Figma", "Web Design", "UI/UX"],
+    image: "https://mir-s3-cdn-cf.behance.net/projects/404/1c7ab4244004315.Y3JvcCwyNDI0LDE4OTYsMCww.jpg",
+    link: "https://www.behance.net/gallery/244004315/Site-Redesign",
   },
   {
-    title: "Responsive Corporate Website",
-    description: "Modern corporate site with clean hierarchy, CMS integration, and accessibility compliance.",
-    tools: ["Figma", "Webflow", "GSAP"],
-    color: "from-primary/15 to-accent/15",
+    title: "Dashboard Design | App Design",
+    description: "Dynamic dashboard and app design with intuitive data visualization and clean interface.",
+    tools: ["Figma", "Dashboard", "App Design"],
+    image: "https://mir-s3-cdn-cf.behance.net/projects/404/91c09a193026155.Y3JvcCwxODc2LDE0NjgsMjc0LDA.png",
+    link: "https://www.behance.net/gallery/193026155/Dashboard-Design-App-Design",
   },
   {
-    title: "Conversion Landing Page",
-    description: "High-converting landing page with A/B tested layouts and optimized call-to-actions.",
-    tools: ["Figma", "HTML/CSS", "Analytics"],
-    color: "from-accent/15 to-primary/15",
+    title: "Project Management System",
+    description: "End-to-end project management tool with task tracking, collaboration, and reporting features.",
+    tools: ["Figma", "Web App", "UI/UX"],
+    image: "https://mir-s3-cdn-cf.behance.net/projects/404/aa6a09167123987.Y3JvcCwyNDAwLDE4NzcsMCww.jpg",
+    link: "https://www.behance.net/gallery/167123987/Project-Management-System",
   },
   {
-    title: "Design System Library",
-    description: "Scalable component library with tokens, variants, and comprehensive documentation.",
-    tools: ["Figma", "Storybook", "Tokens"],
-    color: "from-primary/20 to-accent/10",
+    title: "Health Express | Landing Page",
+    description: "Health & wellness landing page with engaging visuals and conversion-focused layout.",
+    tools: ["Figma", "Landing Page", "Healthcare"],
+    image: "https://mir-s3-cdn-cf.behance.net/projects/404/1f42e1166022515.Y3JvcCwxNjAwLDEyNTEsMCww.jpg",
+    link: "https://www.behance.net/gallery/166022515/Health-Express-Landing-Page",
+  },
+  {
+    title: "WhizzQ Landing Page",
+    description: "Parallax template landing page with smooth animations and modern aesthetic.",
+    tools: ["Figma", "Parallax", "Web Design"],
+    image: "https://mir-s3-cdn-cf.behance.net/projects/404/ec4fe6157854503.Y3JvcCwxMzk5LDEwOTUsMCww.jpg",
+    link: "https://www.behance.net/gallery/157854503/WhizzQ-Landing-Page-Parallax-Template",
+  },
+  {
+    title: "MealHi5 | Food Delivery Website",
+    description: "Food delivery platform with appetizing visuals, easy ordering flow, and responsive design.",
+    tools: ["Figma", "E-commerce", "Web Design"],
+    image: "https://mir-s3-cdn-cf.behance.net/projects/404/c6a11c156306839.Y3JvcCwxMzk5LDEwOTUsMCww.png",
+    link: "https://www.behance.net/gallery/156306839/MealHi5-Food-Delivery-Website",
+  },
+  {
+    title: "Fly Landing Page",
+    description: "Travel app landing page with immersive imagery and seamless user journey.",
+    tools: ["Figma", "Travel", "Landing Page"],
+    image: "https://mir-s3-cdn-cf.behance.net/projects/404/9397af157184219.Y3JvcCwzODUyLDMwMTIsMCww.jpg",
+    link: "https://www.behance.net/gallery/157184219/Fly-Landing-Page",
   },
 ];
 
@@ -44,13 +70,20 @@ const PortfolioSection = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, i) => (
-            <div
+            <a
               key={i}
-              className={`glass-card-hover group rounded-2xl overflow-hidden ${i === 0 ? "md:col-span-2 lg:col-span-2" : ""}`}
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`glass-card-hover group rounded-2xl overflow-hidden block ${i === 0 ? "md:col-span-2 lg:col-span-2" : ""}`}
             >
-              {/* Placeholder thumbnail */}
-              <div className={`h-48 bg-gradient-to-br ${project.color} flex items-center justify-center`}>
-                <span className="text-foreground/30 font-display text-sm">Preview</span>
+              <div className="h-48 overflow-hidden">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                />
               </div>
               <div className="p-6">
                 <div className="flex items-start justify-between mb-2">
@@ -66,7 +99,7 @@ const PortfolioSection = () => {
                   ))}
                 </div>
               </div>
-            </div>
+            </a>
           ))}
         </div>
       </div>
