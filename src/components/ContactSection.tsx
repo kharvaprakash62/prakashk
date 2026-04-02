@@ -98,9 +98,10 @@ const ContactSection = () => {
             />
             <button
               type="submit"
-              className="w-full bg-primary text-primary-foreground py-3 rounded-xl font-medium hover:shadow-[0_0_30px_-5px_hsl(var(--primary)/0.5)] transition-all duration-300"
+              disabled={sending}
+              className="w-full bg-primary text-primary-foreground py-3 rounded-xl font-medium hover:shadow-[0_0_30px_-5px_hsl(var(--primary)/0.5)] transition-all duration-300 disabled:opacity-50"
             >
-              Send Message
+              {sending ? "Sending..." : "Send Message"}
             </button>
           </form>
         </div>
