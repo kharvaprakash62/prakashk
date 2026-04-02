@@ -55,7 +55,7 @@ const HeroSection = () => {
                 alt="Prakash Kharva"
                 width={400}
                 height={400}
-                className="rounded-full w-64 h-64 md:w-80 md:h-80 object-cover"
+                className="rounded-full w-72 h-72 md:w-96 md:h-96 object-cover"
               />
             </div>
           </div>
