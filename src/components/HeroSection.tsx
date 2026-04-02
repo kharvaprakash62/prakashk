@@ -48,21 +48,57 @@ const HeroSection = () => {
         {/* Profile image */}
         <div className="order-1 md:order-2 flex justify-center animate-scale-in">
           <div className="relative">
-            {/* Glow */}
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-accent/30 rounded-full blur-3xl animate-float" />
-            
-            {/* Decorative ring pattern */}
-            <div className="absolute -inset-6 rounded-full border border-primary/20 animate-[spin_20s_linear_infinite]" />
-            <div className="absolute -inset-10 rounded-full border border-dashed border-accent/15 animate-[spin_30s_linear_infinite_reverse]" />
-            <div className="absolute -inset-14 rounded-full border border-dotted border-primary/10 animate-[spin_40s_linear_infinite]" />
-            
-            {/* Corner dots */}
-            <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-primary shadow-[0_0_8px_hsl(var(--primary)/0.6)]" />
-            <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 w-2 h-2 rounded-full bg-accent shadow-[0_0_8px_hsl(var(--accent)/0.6)]" />
-            <div className="absolute top-1/2 -left-4 -translate-y-1/2 w-2 h-2 rounded-full bg-primary shadow-[0_0_8px_hsl(var(--primary)/0.6)]" />
-            <div className="absolute top-1/2 -right-4 -translate-y-1/2 w-2 h-2 rounded-full bg-accent shadow-[0_0_8px_hsl(var(--accent)/0.6)]" />
+            {/* Animated gradient blobs */}
+            <div className="absolute -inset-10 animate-[spin_8s_linear_infinite]">
+              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-24 bg-primary/40 rounded-full blur-2xl" />
+              <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-20 h-20 bg-accent/40 rounded-full blur-2xl" />
+            </div>
+            <div className="absolute -inset-10 animate-[spin_12s_linear_infinite_reverse]">
+              <div className="absolute top-1/2 left-0 -translate-y-1/2 w-20 h-20 bg-accent/30 rounded-full blur-2xl" />
+              <div className="absolute top-1/2 right-0 -translate-y-1/2 w-24 h-24 bg-primary/30 rounded-full blur-2xl" />
+            </div>
 
-            <div className="relative glass-card rounded-full p-2">
+            {/* Orbiting rings with gradient strokes */}
+            <div className="absolute -inset-6 rounded-full border-2 border-transparent animate-[spin_15s_linear_infinite]" style={{ borderImage: 'linear-gradient(135deg, hsl(217 91% 60% / 0.5), transparent 50%, hsl(260 80% 65% / 0.5)) 1' }} />
+            <div className="absolute -inset-10 rounded-full animate-[spin_20s_linear_infinite_reverse]">
+              <svg className="w-full h-full" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="48" fill="none" stroke="hsl(217 91% 60% / 0.2)" strokeWidth="0.5" strokeDasharray="4 6" />
+              </svg>
+            </div>
+            <div className="absolute -inset-16 rounded-full animate-[spin_25s_linear_infinite]">
+              <svg className="w-full h-full" viewBox="0 0 100 100">
+                <circle cx="50" cy="50" r="48" fill="none" stroke="hsl(260 80% 65% / 0.15)" strokeWidth="0.3" strokeDasharray="2 8" />
+              </svg>
+            </div>
+
+            {/* Floating particles */}
+            {[...Array(6)].map((_, i) => (
+              <div
+                key={i}
+                className="absolute w-1.5 h-1.5 rounded-full animate-float"
+                style={{
+                  background: i % 2 === 0 ? 'hsl(217 91% 60%)' : 'hsl(260 80% 65%)',
+                  boxShadow: i % 2 === 0 ? '0 0 12px hsl(217 91% 60% / 0.8)' : '0 0 12px hsl(260 80% 65% / 0.8)',
+                  top: `${15 + Math.sin(i * 1.05) * 40}%`,
+                  left: `${15 + Math.cos(i * 1.05) * 40}%`,
+                  animationDelay: `${i * 0.8}s`,
+                  animationDuration: `${3 + i * 0.5}s`,
+                }}
+              />
+            ))}
+
+            {/* Hexagon pattern overlay */}
+            <div className="absolute -inset-8 animate-[spin_30s_linear_infinite_reverse] opacity-20">
+              <svg className="w-full h-full" viewBox="0 0 200 200">
+                <polygon points="100,10 170,50 170,130 100,170 30,130 30,50" fill="none" stroke="hsl(217 91% 60%)" strokeWidth="0.5" />
+                <polygon points="100,30 150,60 150,120 100,150 50,120 50,60" fill="none" stroke="hsl(260 80% 65%)" strokeWidth="0.5" />
+              </svg>
+            </div>
+
+            {/* Main glow behind image */}
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/25 via-transparent to-accent/25 rounded-full blur-3xl animate-float" />
+
+            <div className="relative glass-card rounded-full p-2 shadow-[0_0_60px_-10px_hsl(217_91%_60%_/_0.3)]">
               <img
                 src={profileImg}
                 alt="Prakash Kharva"
