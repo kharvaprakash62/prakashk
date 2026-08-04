@@ -12,7 +12,7 @@ const AboutSection = () => {
         <div className="grid md:grid-cols-3 gap-8">
           <div className="md:col-span-2 glass-card p-8 rounded-2xl">
             <p className="text-muted-foreground leading-relaxed mb-6">
-              I'm a product-focused UI/UX & Web Designer with over 5 years of experience creating scalable web and mobile applications. My design philosophy centers on understanding users deeply and translating complex requirements into clean, intuitive interfaces.
+              I'm a product-focused UI/UX & Web Designer with over 6 years of experience creating scalable web and mobile applications. My design philosophy centers on understanding users deeply and translating complex requirements into clean, intuitive interfaces.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-6">
               I specialize in SaaS dashboard design, responsive web interfaces, and building structured design systems that bridge design and development. I work closely with engineering teams to ensure pixel-perfect implementation and measurable user impact.
