@@ -12,7 +12,7 @@ const AboutSection = () => {
         <div className="grid md:grid-cols-3 gap-8">
           <div className="md:col-span-2 glass-card p-8 rounded-2xl">
             <p className="text-muted-foreground leading-relaxed mb-6">
-              I'm a product-focused UI/UX & Web Designer based in Vadodara, with over 5 years of experience shaping scalable digital products for startups and enterprise clients. I translate user insights into polished web and mobile interfaces that feel intuitive, accessible, and on-brand.
+              I'm a product-focused UI/UX & Web Designer based in Vadodara, with over 6 years of experience shaping scalable digital products for startups and enterprise clients. I translate user insights into polished web and mobile interfaces that feel intuitive, accessible, and on-brand.
             </p>
             <p className="text-muted-foreground leading-relaxed mb-6">
               I specialize in SaaS dashboards, responsive websites, and design systems built around reusable components, interaction patterns, and developer-ready assets. My process blends research, wireframing, prototyping, and design handoff to deliver consistent experiences.
