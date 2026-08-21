@@ -28,8 +28,8 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto flex items-center justify-between py-4">
-        <a href="#home" className="font-display text-xl font-bold gradient-text">
-          PK
+        <a href="#home" className="font-display text-xl font-bold uppercase tracking-wide">
+         Prakash<span className="font-display text-xl font-bold gradient-text uppercase tracking-wide">K</span>.
         </a>
 
         {/* Desktop */}
