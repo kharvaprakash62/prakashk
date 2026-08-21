@@ -1,7 +1,7 @@
 import { ArrowDown, Briefcase, Monitor, Smartphone } from "lucide-react";
 
 // const profileImg = "https://i.postimg.cc/25HzBq1D/Image-(10).jpg";
-const profileImg = "assets/portrait_clean.png";
+const profileImg = "portrait_clean.png";
 
 const HeroSection = () => {
   return (
